@@ -123,7 +123,7 @@ let
 
       dontStrip = true;
 
-      nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ gradleSetupHook' ] + extraBuildInputs;
+      nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ gradleSetupHook' ] ++ extraBuildInputs;
 
       gradleFlags =
         [ "--console=plain" ]
