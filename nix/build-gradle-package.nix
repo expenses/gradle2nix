@@ -137,7 +137,7 @@ let
       "lockFile"
       "fetchers"
       "nativeBuildInputs"
-      "overlays"
+      "overrides"
       "passthru"
     ]
   );
