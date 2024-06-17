@@ -26,6 +26,7 @@
   buildMavenRepo,
   gradleSetupHook,
   writeText,
+  extraBuildInputs ? []
 }:
 
 {
@@ -122,7 +123,7 @@ let
 
       dontStrip = true;
 
-      nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ gradleSetupHook' ];
+      nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ gradleSetupHook' ] + extraBuildInputs;
 
       gradleFlags =
         [ "--console=plain" ]
